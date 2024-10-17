@@ -50,9 +50,11 @@ h4 {
 p {
     font-size: 1.6rem;
 }
-a{
+
+a {
     font-size: 1.4rem;
 }
+
 span {
     font-size: 1.3rem;
     font-weight: 500;
@@ -778,6 +780,13 @@ span {
 
 .oldham-section .oldham-text p {
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .oldham-section .oldham-text {
+        padding: 1.5rem;
+        padding-left: 0;
+    }
 }
 
 /* 
