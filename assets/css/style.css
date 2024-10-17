@@ -1,0 +1,1026 @@
+/* MONTSERRAT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #FBAC03;
+    --seconday-color: #323232;
+    --white-color: #fff;
+    --text-color: #403D3D;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width:767px) {
+    html {
+        font-size: 52.5%;
+    }
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.6rem;
+}
+a{
+    font-size: 1.4rem;
+}
+span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: .5;
+}
+
+@media (max-width:575px) {
+    html {
+        font-size: 52%;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+/* 
+=============================================
+        TOP BAR SECTION START
+=============================================
+*/
+.top-bar {
+    background: linear-gradient(-45deg, #202020 10%, transparent 50%, #202020 60%), url("../imgs/top-bar-bg.png");
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.top-bar .top-card .top-card-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 1.5rem;
+    margin-top: 5px;
+}
+
+.top-bar .top-card .top-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-bar .top-card .top-card-text .top-text-title {
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+}
+
+.top-bar .top-card .top-card-text .top-card-desc {
+    color: var(--white-color);
+}
+
+/* 
+=============================================
+        TOP BAR SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+        HEADER SECTION START
+=============================================
+*/
+.header {
+    /* background-image: ; */
+    background: linear-gradient(180deg, rgba(252, 184, 46, 0.7) 0%, rgba(53, 53, 53, 0.7) 100%), url("../imgs/nav-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--seconday-color);
+}
+
+.header .logo {
+    width: 200px;
+    margin-right: 2.5rem;
+}
+
+.header .navbar-navs ul li a {
+    all: unset;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 600;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    position: relative;
+}
+
+.header .navbar-navs ul li a::before,
+.header .navbar-navs ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: .5s ease-in-out;
+}
+
+.header .navbar-navs ul li a::after {
+    left: 0;
+}
+
+.header .navbar-navs ul li a::before {
+    top: -5px;
+    right: 0;
+}
+
+.header .navbar-navs ul li a.active::before,
+.header .navbar-navs ul li a.active::after,
+.header .navbar-navs ul li a:hover::before,
+.header .navbar-navs ul li a:hover::after {
+    width: 100%;
+}
+
+.header .navbar-navs ul li a.active {
+    color: var(--primary-color);
+}
+
+.header .navbar-right li .nav-item {
+    all: unset;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    margin: 0 1rem;
+    transition: .5s ease-in-out;
+}
+
+.header .navbar-right li .nav-item:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1199px) {
+    .header .logo {
+        width: 150px;
+        margin-right: 2rem;
+    }
+
+    .header .navbar-right li .nav-item {
+        font-size: 1.5rem;
+        margin: 0 .2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .header .navbar-navs {
+        /* position: fixed;
+        width: 250px;
+        height: 100dvh; */
+        background-color: var(--seconday-color);
+        width: 250px;
+        /* top: 0;
+        left: 0;
+        padding: 40px 0;
+        z-index: 10000; */
+    }
+
+    .header .navbar-navs .nav-close {
+        all: unset;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-left: auto;
+    }
+
+    .header .navbar-navs .nav-close i {
+        color: var(--white-color);
+        opacity: 1;
+        font-size: 2rem;
+        transition: .5s ease-in-out;
+    }
+
+    .header .navbar-navs .nav-close i:hover {
+        color: var(--primary-color);
+    }
+
+
+    /* .header .navbar-navs:after{
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #403D3D;
+        } */
+
+    .header .navbar-navs ul li a {
+        all: unset;
+        /* background-color: #FBAC03; */
+        display: block;
+        padding: .5rem 2rem;
+        font-size: 1.6rem;
+        color: var(--white-color);
+        border-bottom: 1px solid var(--text-color);
+        transition: .5s ease-in-out;
+    }
+
+    .header .navbar-navs ul li a:is(:hover, .active) {
+        color: var(--white-color);
+        background-color: var(--primary-color);
+    }
+}
+
+/* 
+=============================================
+        HEADER SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+    HERO SECTION START
+=============================================
+*/
+.hero-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/hero-bg.png");
+    min-height: calc(100dvh - 135px);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 7rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .hero {
+    width: 100%;
+}
+
+.hero-section .hero-content h1 {
+    font-size: 4rem;
+    color: var(--white-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.hero-section .hero-content p {
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin-bottom: 2rem;
+}
+
+.hero-section .hero-content a {
+    display: inline-block;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+.hero-section .hero-content a:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+/* 
+=============================================
+    HERO SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+        DESCOUNT SECTION START
+=============================================
+*/
+.descount-section {
+    margin-bottom: 7rem;
+}
+
+.descount-section .dicount-card {
+    background: url("../imgs/discount-card-bg.png");
+    background-position: center;
+    background-size: cover;
+    /* min-height: 200px; */
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.descount-section .dicount-card h3 {
+    color: var(--primary-color);
+}
+
+.descount-section .dicount-card p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--white-color);
+}
+
+/* 
+=============================================
+        DESCOUNT SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+        FEATURE SECTION START
+=============================================
+*/
+.feature-section {
+    background: url("../imgs/feature-bg.png");
+    background-position: center;
+    background-size: cover;
+    padding: 7rem 0;
+}
+
+.feature-section .feature-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: .8rem;
+    padding: 1.5rem 30px;
+    margin: 1rem 0;
+}
+
+.feature-section .feature-card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+.feature-section .feature-card .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.feature-section .feature-card .feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-section .feature-card .feature-text h3 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.feature-section .feature-card .feature-text p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* 
+=============================================
+        FEATURE SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+    STEP CARD DESIGN SECTION START
+=============================================
+*/
+.step-card-section {
+    margin: 7rem 0;
+}
+
+.step-card-section .step-card {
+    background-color: var(--primary-color);
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+}
+
+.step-card-section .step-card .step-card-text {
+    width: calc(100% - 70px);
+    background-color: var(--white-color);
+    border-top-right-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.step-card-section .step-card .step-card-text p {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* 
+=============================================
+    STEP CARD DESIGN SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+        OUR CLIENT SECTION START
+=============================================
+*/
+.our-client {
+    margin-bottom: 7rem;
+}
+
+.our-client .section-heading h6 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.our-client .section-heading h2 {
+    color: var(--primary-color);
+}
+
+
+.our-client .our-client-card {
+    border: 1px solid var(--seconday-color);
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.our-client .our-client-card .client-logo {
+    width: 200px;
+    height: 150px;
+    margin: auto;
+}
+
+.our-client .our-client-card .client-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 
+=============================================
+        OUR CLIENT SECTION END
+=============================================
+*/
+
+/* 
+=============================================
+    RECOMMENDED TYRE SECTION START
+=============================================
+*/
+.recommended-section {
+    margin: 7rem 0;
+}
+
+.recommended-section .recommended-card {
+    max-width: 320px;
+    margin: .8rem auto;
+    box-shadow: 1px 1px 53.4px -15px #FBAC0394;
+}
+
+.recommended-section .recommended-card .card-header {
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+}
+
+.recommended-section .recommended-card .card-header h3 {
+    margin-bottom: 0;
+    font-size: 2.2rem;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.recommended-section .recommended-card .card-body {
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    /* padding-bottom: 1rem; */
+}
+
+.recommended-section .recommended-card .card-body .card-img {
+    max-width: 150px;
+    margin: auto;
+}
+
+.recommended-section .recommended-card .card-body .card-img img {
+    width: 100%;
+}
+
+.recommended-section .recommended-card .card-body .card-text p {
+    /* font-size: 1.5rem; */
+}
+
+.recommended-section .recommended-card .card-body .card-text .rec-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: .7rem 2.5rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: .5s ease-in-out;
+}
+
+.recommended-section .recommended-card .card-body .card-text .rec-btn:hover {
+    background-color: var(--seconday-color);
+}
+
+/* 
+=============================================
+    RECOMMENDED TYRE SECTION END
+=============================================
+*/
+
+
+/* 
+===============================================
+    MAIN SLIDER SECTION START 
+===============================================
+*/
+.main-img-slider {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden;
+    margin: 7rem 0;
+}
+
+.main-img-slider .slide-img {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+
+.main-img-slider .slide-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.main-img-slider .owl-dots {
+    position: absolute;
+    z-index: 100;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-img-slider .owl-dots button {
+    background-color: transparent !important;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+}
+
+.main-img-slider .owl-dots button span {
+    all: unset;
+    display: block;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 5px 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: transparent !important;
+    border: solid var(--white) 2px;
+    opacity: 1;
+    transition: 0.4s ease;
+}
+
+.main-img-slider .owl-dots button.active span {
+    background-color: var(--white) !important;
+}
+
+@media (max-width: 1199px) {
+    .main-img-slider .slide-img {
+        height: 600px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-img-slider .slide-img {
+        height: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-img-slider .slide-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 575px) {
+    .main-img-slider .slide-img {
+        height: 300px;
+    }
+}
+
+/* 
+===============================================
+    MAIN SLIDER SECTION END 
+===============================================
+*/
+
+/* 
+===============================================
+    ABOUT SECTION START 
+===============================================
+*/
+.about-section {
+    padding: 7rem 0;
+    background: url("../imgs/about-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.about-section .about-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    box-shadow: 3px 0px 64.7px 6px #FBAC03;
+    padding: 2rem;
+    text-align: center;
+    max-width: 330px;
+    margin: 1.5rem auto;
+}
+
+.about-section .about-card .card-img {
+    width: 50px;
+    height: 50px;
+    margin: 1rem auto;
+}
+
+.about-section .about-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-section .about-card .card-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.about-section .about-card .card-text p {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* 
+===============================================
+    ABOUT SECTION END 
+===============================================
+*/
+
+/* 
+===============================================
+        STOCK SECTION START
+===============================================
+*/
+
+.stock-section {
+    padding: 40px 80px;
+    margin: 7rem 0;
+}
+
+.stock-section .brand-img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.stock-section .brand-img img {
+    width: 100%;
+    max-width: 160px;
+    height: 100px;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .stock-section {
+        padding: 40px 15px;
+    }
+}
+
+
+/* 
+===============================================
+        STOCK SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+        OLDHAM SECTION START
+===============================================
+*/
+.oldham-section {
+    margin-bottom: 7rem;
+}
+
+.oldham-section .oldham-content {
+    border: 1px solid var(--primary-color);
+}
+
+.oldham-section .oldham-text h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.oldham-section .oldham-text h3 {
+    font-weight: 600;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.oldham-section .oldham-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* 
+===============================================
+        OLDHAM SECTION END
+===============================================
+*/
+
+/* 
+===============================================
+        BRAND SLIDER SECTION START
+===============================================
+*/
+.logos-section {
+    background: var(--primary-color);
+    padding-bottom: 2rem;
+}
+
+.logos-section h2 {
+    padding: 1.5rem 0;
+    color: var(--white-color);
+}
+
+.logos-section .brands-wrapper {
+    background-color: #FDDE9A;
+}
+
+.logos-section .brands-slide img {
+    max-width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* 
+===============================================
+        BRAND SLIDER SECTION END
+===============================================
+*/
+
+
+/* 
+===============================================
+     GOOGLE REVIEWS SECTION START
+===============================================
+*/
+.reviews {
+    padding: 40px 0;
+}
+
+.review-card {
+    border: 1px solid #eee;
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 30px -20px grey;
+}
+
+.review-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.review-card .stars {
+    margin-top: 3px;
+}
+
+.review-card .stars i {
+    font-size: 12px;
+    color: #ffc340;
+}
+
+.review-card .rev-content {
+    margin-top: 10px;
+}
+
+.review-card .rev-content p {
+    font-size: 1.4rem;
+}
+
+.reviews .reviews-wrap .review {
+    border-bottom: solid 1px rgba(190, 190, 190, 0.35);
+    margin: 15px auto;
+    width: 100%;
+    background: var(--grey);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.reviews .reviews-wrap .review .name {
+    min-width: 150px;
+}
+
+.reviews .reviews-wrap .review .name h6 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif !important;
+    color: var(--full-black);
+    margin-bottom: 0;
+}
+
+.reviews .reviews-wrap .review .stars {
+    min-width: 140px;
+    margin-bottom: 0px;
+}
+
+.reviews .reviews-wrap .review .stars i {
+    font-size: 12px;
+    color: #e4b248;
+}
+
+.reviews .reviews-wrap .review p {
+    margin-bottom: 0;
+}
+
+.reviews a.rev-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: var(--white);
+    background-color: var(--green);
+}
+
+.reviews a.rev-btn:hover {
+    border-color: var(--dark-green);
+    background-color: var(--dark-green);
+}
+
+/* 
+===============================================
+     GOOGLE REVIEWS SECTION END   
+===============================================
+*/
+
+/* 
+===============================================
+      FOOTER SECTION START   
+===============================================
+*/
+.footer {
+    background: var(--seconday-color);
+    padding: 40px 20px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    color: var(--white-color);
+    margin: 0 0 13px 0;
+    font-weight: 600;
+}
+
+.footer p {
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 4px;
+}
+
+.footer ul li a {
+    color: var(--white-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer ul li a i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .social-icon li a:hover {
+    color: var(--primary-color);
+}
+
+.footer .social-icon li a i {
+    font-size: 20px;
+}
+
+
+.footer .footer-bottom img {
+    width: 50px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.footer .footer-bottom p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.footer .footer-bottom p span {
+    color: var(--dark-orange);
+}
+
+.footer .footer-bottom p strong {
+    font-weight: 600;
+}
+
+.footer .footer-bottom p a {
+    color: #fff;
+    /* letter-spacing: 1px; */
+}
+
+.footer .footer-bottom p a:hover {
+    color: var(--primary-blue);
+}
+
+
+
+/* 
+===============================================
+      FOOTER SECTION END   
+===============================================
+*/
