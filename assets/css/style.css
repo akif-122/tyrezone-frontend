@@ -320,6 +320,12 @@ span {
     color: var(--primary-color);
 }
 
+/* @media (max-width: 575px) {
+    .hero-section {
+        min-height: auto;
+    }
+} */
+
 /* 
 =============================================
     HERO SECTION END
@@ -378,7 +384,7 @@ span {
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(2px);
     border-radius: .8rem;
-    padding: 1.5rem 30px;
+    padding: 2rem 30px;
     margin: 1rem 0;
 }
 
@@ -479,8 +485,10 @@ span {
 .our-client .our-client-card {
     border: 1px solid var(--seconday-color);
     border-radius: 1.5rem;
+    margin: auto;
     margin-bottom: 1.5rem;
     padding: 1.5rem;
+    max-width: 300px;
 }
 
 .our-client .our-client-card .client-logo {
@@ -513,7 +521,7 @@ span {
 .recommended-section .recommended-card {
     max-width: 320px;
     margin: .8rem auto;
-    box-shadow: 1px 1px 53.4px -15px #FBAC0394;
+    box-shadow: 1px 1px 33.4px -15px #FBAC0394;
 }
 
 .recommended-section .recommended-card .card-header {
@@ -673,9 +681,10 @@ span {
 
 
 .about-section .about-card {
+    height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(4px);
-    box-shadow: 3px 0px 64.7px 6px #FBAC03;
+    box-shadow: 3px 0px 24.7px -6px #FBAC03;
     padding: 2rem;
     text-align: center;
     max-width: 330px;
