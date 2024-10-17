@@ -373,7 +373,7 @@ span {
 =============================================
 */
 .feature-section {
-    background: url("../imgs/feature-bg.png");
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../imgs/feature-bg.png");
     background-position: center;
     background-size: cover;
     padding: 7rem 0;
@@ -381,7 +381,7 @@ span {
 
 .feature-section .feature-card {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(2px);
     border-radius: .8rem;
     padding: 2rem 30px;
@@ -435,19 +435,46 @@ span {
 */
 .step-card-section {
     margin: 7rem 0;
+    background-color: #E5E5E5;
+    padding: 5rem 0;
 }
 
 .step-card-section .step-card {
-    background-color: var(--primary-color);
+    background-color: var(--white-color);
+    margin: auto;
     margin-bottom: 4rem;
     padding-top: 1rem;
+    box-shadow: 10px 10px 10px -15px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    /* height: 100%; */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    
+}
+
+.step-card-section .step-count h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+.step-card-section .step-count h2{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 .step-card-section .step-card .step-card-text {
-    width: calc(100% - 70px);
     background-color: var(--white-color);
     border-top-right-radius: 2rem;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
+    margin-top: 20px;
+}
+.step-card-section .step-card .step-card-text h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .step-card-section .step-card .step-card-text p {
