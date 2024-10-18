@@ -275,7 +275,8 @@ span {
 */
 .hero-section {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../imgs/hero-bg.png");
-    min-height: calc(100dvh - 135px);
+    /* min-height: calc(100dvh - 135px); */
+    padding: 100px 0;
     background-position: center;
     background-size: cover;
     margin-bottom: 7rem;
@@ -318,6 +319,55 @@ span {
 .hero-section .hero-content a:hover {
     background-color: transparent;
     color: var(--primary-color);
+}
+
+.hero-section .tab-wrap {
+    background-color: rgba(255, 255, 255, .85);
+    padding: 5rem;
+    max-width: 555px;
+    backdrop-filter: blur(3px);
+    border-radius: .5rem;
+}
+
+.hero-section .tab-wrap h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.hero-section .tab-wrap label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.hero-section .tab-wrap select {
+    padding: .8rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: none;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.hero-section .tab-wrap button {
+    background: var(--primary-color);
+    border: solid #1898d900 2px;
+    color: var(--white-color);
+    font-weight: 600;
+    padding: .5rem 2.5rem;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    transition: .5s ease-in-out;
+}
+.hero-section .tab-wrap button:hover{
+    color: var(--white-color);
+    background-color: var(--seconday-color);
 }
 
 /* @media (max-width: 575px) {
@@ -373,7 +423,7 @@ span {
 =============================================
 */
 .feature-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../imgs/feature-bg.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imgs/feature-bg.png");
     background-position: center;
     background-size: cover;
     padding: 7rem 0;
@@ -450,17 +500,18 @@ span {
     padding: 3rem 2rem;
     text-align: center;
     border-radius: 1.5rem;
-    
+
 }
 
-.step-card-section .step-count h3{
+.step-card-section .step-count h3 {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 0;
     color: var(--primary-color);
 }
-.step-card-section .step-count h2{
+
+.step-card-section .step-count h2 {
     font-size: 3.2rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -472,7 +523,8 @@ span {
     /* padding: 1.5rem; */
     margin-top: 20px;
 }
-.step-card-section .step-card .step-card-text h3{
+
+.step-card-section .step-card .step-card-text h3 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -872,13 +924,112 @@ span {
     padding: 40px 0;
 }
 
-.review-card {
-    border: 1px solid #eee;
-    background-color: var(--white);
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 0 30px -20px grey;
+.reviews .review-banner {
+    background-color: #F3F3F3;
+    border-radius: 1rem;
+    padding: 2rem 4rem;
+    margin-bottom: 2.5rem;
 }
+
+.reviews .review-banner .review-btn {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    border-radius: .5rem;
+    border-color: rgba(0, 0, 0, 0);
+    line-height: 1.32;
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgb(25, 123, 255);
+    border-width: 2px;
+    text-decoration: none;
+}
+
+.reviews .review-banner .review-rating h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.reviews .review-banner .review-rating svg {
+    width: 100px;
+}
+
+.reviews .review-banner .review-rating .stars {
+    margin: 0 1rem;
+}
+
+.reviews .review-banner .review-rating .stars i {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+}
+
+.reviews .review-banner .review-rating span {
+    color: rgb(17 17 17 / 50%);
+}
+
+
+@media (max-width: 767px) {
+    .reviews .review-banner .review-rating svg {
+        width: 70px;
+    }
+
+    .reviews .review-banner .review-rating h3 {
+        font-size: 2rem;
+    }
+
+    .reviews .review-banner .review-btn {
+        padding: 1.2rem 2.2rem;
+        font-size: 1.6rem;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px){
+    .reviews .review-banner .review-rating{
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.review-card {
+    background-color: #F3F3F3;
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
+.review-card .user-detail .avatar {
+    min-width: 50px;
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    margin-right: 1.5rem;
+    position: relative;
+}
+
+.review-card .user-detail .avatar img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-card .user-detail .avatar .g-icon svg {
+    width: 25px;
+    position: absolute;
+    right: -5px;
+    top: 25px;
+}
+
+.review-card .user-detail .username span {
+    color: rgb(17 17 17 / 50%);
+}
+
+/* .review-card .user-detail .avatar .g-icon{
+    position: absolute;
+    right: 0;
+} */
 
 .review-card h5 {
     font-size: 18px;
@@ -896,11 +1047,16 @@ span {
 }
 
 .review-card .rev-content {
-    margin-top: 10px;
+    margin-top: 2rem;
 }
 
-.review-card .rev-content p {
-    font-size: 1.4rem;
+
+.review-card .rev-content .stars {
+    margin-bottom: 1rem;
+}
+
+.review-card .rev-content .stars i {
+    font-size: 1.8rem;
 }
 
 .reviews .reviews-wrap .review {
